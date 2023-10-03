@@ -1,0 +1,737 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@600&family=Epilogue:wght@500;700&family=Fraunces:opsz,wght@9..144,700;9..144,900&family=Hanken+Grotesk:wght@500;700;800&family=Inter:wght@400;700;800&family=Montserrat:wght@500;700&family=Outfit:wght@300;400;600&family=Overpass:wght@300;400;700&family=Poppins:ital,wght@0,700;1,400;1,800&family=Red+Hat+Display:wght@500;700;900&family=Space+Grotesk:wght@500&family=Space+Mono:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@600&family=Epilogue:wght@500;700&family=Fraunces:opsz,wght@9..144,700;9..144,900&family=Hanken+Grotesk:wght@500;700;800&family=Inter:wght@400;700;800&family=Montserrat:wght@500;700&family=Outfit:wght@300;400;600&family=Overpass:wght@300;400;600;700&family=Poppins:ital,wght@0,700;1,400;1,800&family=Red+Hat+Display:wght@500;700;900&family=Space+Grotesk:wght@500&family=Space+Mono:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@600&family=Epilogue:wght@500;700&family=Fraunces:opsz,wght@9..144,700;9..144,900&family=Hanken+Grotesk:wght@500;700;800&family=Inter:wght@400;700;800&family=Montserrat:wght@500;700&family=Outfit:wght@300;400;600&family=Overpass:wght@300;400;600;700&family=Poppins:ital,wght@0,700;1,400;1,800&family=Red+Hat+Display:wght@500;700;900&family=Space+Grotesk:wght@500&family=Space+Mono:wght@700&family=Ubuntu&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@600&family=Epilogue:wght@500;700&family=Fraunces:opsz,wght@9..144,700;9..144,900&family=Hanken+Grotesk:wght@500;700;800&family=Inter:wght@400;700;800&family=Montserrat:wght@500;700&family=Outfit:wght@300;400;600&family=Overpass:wght@300;400;600;700&family=Poppins:ital,wght@0,700;1,400;1,800&family=Red+Hat+Display:wght@500;700;900&family=Space+Grotesk:wght@500&family=Space+Mono:wght@700&family=Ubuntu:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@600&family=Epilogue:wght@500;700&family=Fraunces:opsz,wght@9..144,700;9..144,900&family=Hanken+Grotesk:wght@500;700;800&family=Inter:wght@400;700;800&family=Montserrat:wght@500;700&family=Outfit:wght@300;400;600&family=Overpass:wght@300;400;600;700&family=Poppins:ital,wght@0,700;1,400;1,800&family=Red+Hat+Display:wght@500;700;900&family=Space+Grotesk:wght@500&family=Space+Mono:wght@700&family=Ubuntu:wght@400;500;700&display=swap');
+
+body{
+    margin: 0;
+    padding: 0;
+    max-width: 100vw;
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+/* first box */
+.wrapper{
+    background: linear-gradient(to right, hsl(13, 100%, 72%), hsl(353, 100%, 62%));
+    display: flex;
+    flex-direction: column;
+    border-radius: 0 0 0 70px;
+}
+/* .wrapper .bg{
+    position: absolute;
+    transform: scale(0.3);
+    z-index: 0;
+    top: 10px;
+    left: 10px;
+} */
+/* nav menu */
+.wrapper nav{
+    margin: 30px 150px 10px 150px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: Ubuntu;
+    overflow-x: hidden;
+}
+.wrapper nav .cover{
+    display: flex;
+    gap: 30px;
+}
+.wrapper nav .cover .logo{
+    display: flex;
+    align-self: center;
+}
+.wrapper nav .cover .menulist{
+    padding: 0;
+    display: flex;
+    gap: 20px;
+}
+/* sublist menus */
+.wrapper nav .cover .menulist>li{
+    font-size: 0.9rem;
+    color: hsl(0, 0%, 100%);
+}
+.wrapper nav .cover .menulist li{
+    list-style: none;
+}
+.wrapper nav .cover .menulist img{
+    margin-left: 5px;
+}
+/* arrows */
+.wrapper nav .cover .menulist .up{
+    transform: rotate(180deg);
+    display: none;
+}
+.wrapper nav .cover .menulist .up.active{
+    display: inline;
+}
+.wrapper nav .cover .menulist .down.nonactive{
+    display: none;
+}
+
+.rotate-icon {
+    transform: rotate(180deg);
+    transition: transform 0.3s ease; 
+  }
+
+  .menu-button {
+    border: 0;
+    background-color: transparent;
+    color: hsl(0, 0%, 100%);
+  }
+  
+  
+.cover .menulist li>ul{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 20px 20px 20px 15px;
+    border-radius: 7px;
+    background-color: hsl(0, 0%, 100%);
+    color: black;
+    position: absolute;
+    z-index: 5;
+}
+.cover .menulist li .product{
+    top: 12%;
+    left: 17%;
+    display: none;
+}
+.cover .menulist li .product.true1{
+    display: flex;
+}
+.cover .menulist li .company{
+    top: 12%;
+    left: 26.5%;
+    display: none;
+}
+.cover .menulist li .company.true2{
+    display: flex;
+}
+.cover .menulist li .connect{
+    top: 12%;
+    left: 33.5%;
+    display: none;
+}
+.cover .menulist li .connect.true3{
+    display: flex;
+}
+/* buttons login,signup */
+.wrapper .button{
+    display: flex;
+    gap: 20px;
+}
+.button .login{
+    border: 0;
+    background-color: transparent;
+    color: hsl(0, 0%, 100%);
+    cursor: pointer;
+}
+.button .signup{
+    border: 0;
+    border-radius: 20px;
+    padding: 10px 25px;
+    color: hsl(356, 100%, 66%);
+    font-weight: 700;
+}
+.button .mobilemenulist{
+    display: none;
+}
+.wrapper nav .hamburgericon{
+    display: none;
+}
+nav .closeicon{
+    display: none;
+}
+/* first content */
+.wrapper .maincontent{
+    margin: 100px 0;
+    font-family: Overpass;
+    align-self: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    color: hsl(0, 0%, 100%);
+}
+.wrapper .maincontent h1{
+    margin: 0;
+    font-size: 3.5rem;
+}
+.wrapper .maincontent p{
+    margin: 0;
+    font-size: 1.2rem;
+    color: rgba(255, 255, 255, 0.548);
+}
+.wrapper .maincontent .buttondiv{
+    margin-top: 20px;
+    display: flex;
+    gap: 10px;
+}
+.wrapper .maincontent .buttondiv button{
+    padding: 10px 15px;
+    border-radius: 20px;
+    font-family: Ubuntu;
+}
+.wrapper .maincontent .buttondiv .start{
+    border: 0;
+    color: hsl(356, 100%, 66%);
+    font-weight: 700;
+}
+.wrapper .maincontent .buttondiv .learnmore{
+    background-color: transparent;
+    border: 1px solid hsl(0, 0%, 100%);
+    color: hsl(0, 0%, 100%);
+    font-weight: 700;
+}
+/* second section */
+.secondcontent{
+    min-height: 100vh;
+    position: relative;
+    overflow-x: hidden;
+    font-family: Ubuntu;
+    overflow-x: hidden;
+    /* background-color: aqua; */
+}
+
+.secondcontent .illustrator{
+    max-width: 45%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: -12%;
+    overflow-x: hidden;
+}
+.secondcontent .illustrator img{
+    width: 100%;
+    height: 100%;
+}
+.illustrator2{
+    display: none;
+}
+.secondcontent h1{
+    margin-top: 100px;
+    text-align: center;
+    font-size: 2.7rem;
+}
+.secondcontent h1,h2{
+    color: hsl(208, 49%, 24%);
+}
+.secondcontent .secondcover{
+    margin-left: 100px;
+    max-width: 40%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.secondcover h2{
+    font-size: 1.4rem;
+}
+.secondcover p{
+    line-height: 25px;
+    color: hsl(207, 13%, 34%);
+    font-size: 0.95rem;
+}
+/* third section */
+.thirdcontent{
+    min-height: 400px;
+    background-color: hsl(237, 17%, 21%);
+    border-radius: 0 70px 0 50px;
+    background-image: url('images/bg-pattern-circles.svg');
+    background-size: 75%;
+    background-position: -63.2% 80%;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    position: relative;
+}
+.thirdcontent .thirdtext{
+    max-width: 50%;
+    display: flex;
+    flex-direction: column;
+    color: white;
+    font-family: Overpass;
+}
+.thirdcontent h1{
+    font-size: 2rem;
+    margin-left: 40px;
+}
+.thirdtext p{
+    margin-left: 40px;
+    max-width: 75%;
+    line-height: 25px;
+    color: hsl(240, 2%, 79%);
+}
+.thirdcontent .mobile{
+    width: 40%;
+    position: absolute;
+    left: 10%;
+    top: -15%;
+    z-index: 999;
+}
+/* fourth section */
+.fourthcontent{
+    min-height: 100vh;
+    background-image: url('images/illustration-laptop-desktop.svg');
+    background-repeat: no-repeat;
+    background-size: 50%;
+    background-position: -28.8% 50%;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    overflow-x: hidden;
+}
+.mob{
+    display: none;
+}
+.fourthcontent .fourthtext{
+    max-width: 30%;
+    margin-right: 20%;
+}
+.fourthtext h1{
+    color: hsl(208, 49%, 24%);
+}
+.fourthtext p{
+    color: hsl(207, 13%, 34%);
+    line-height: 25px;
+}
+/* footer  */
+.footersection{
+    min-height: 300px;
+    background-color: hsl(240, 10%, 16%);
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    border-radius: 0 50px 0 0;
+    list-style: none;
+    color: hsl(0, 0%, 100%);
+    font-family: Overpass;
+    overflow-x: hidden;
+}
+.footersection .footer{
+    margin: 0 10%;
+    width: 70%;
+    display: flex;
+    justify-content: space-between;
+    /* align-items: center; */
+    flex-wrap: wrap;
+}
+.footer .footertext{
+    flex: 1 1 200px;
+}
+.footer .footertext li{
+    color: hsl(240, 2%, 79%);
+    font-size: 0.85rem;
+    margin-bottom: 10px;
+}
+/* hamburger icon */
+nav .hamburgericon{
+    display: none;
+}
+/* media query */
+@media all and (max-width:1050px) {
+    .thirdcontent{
+        margin-top: 180px;
+    }
+    .secondcontent{
+        min-height: 50vh;
+    }
+    .fourthcontent{
+        min-height: 50vh;
+    }
+    .footersection .footer{
+        margin: 15% 10%;
+    }
+    .wrapper nav .hamburgericon{
+        display: none;
+    }
+    
+}
+@media all and (max-width:900px) {
+    .wrapper nav .hamburgericon{
+        display: block;
+    }
+    .wrapper nav{
+        margin: 30px 20px 20px;
+    }
+    .wrapper nav .cover .menulist{
+        display: none;
+    }
+    .wrapper .maincontent h1{
+        padding: 0 20px;
+        text-align: center;
+        font-size: clamp(0.5rem,9.5vw,3rem);
+    }
+    .wrapper .maincontent p{
+        padding: 0 20px;
+        text-align: center;
+    }
+    .wrapper nav .button{
+        position: absolute;
+        right: 5%;
+        top: 13%;
+        display: none;
+        flex-direction: column;
+        background-color: white;
+        width: 80%;
+        max-height: 100vh;
+        box-shadow: 5px 3px 30px rgba(29, 29, 29, 0.322);
+        text-align: center;
+        padding: 20px;
+        gap: 10px;
+        z-index: 10;
+        font-family: Overpass;
+        font-weight: 600;
+        transform: scale(0.1);
+        transition: 0.5s;
+        overflow-x: hidden;
+    }
+    .wrapper nav.activate .button{
+        display: flex;
+        transform: scale(1);
+        overflow-x: hidden;
+    }
+    .button .mobilemenulist{
+        display: flex;
+        flex-direction: column;
+        list-style: none;
+        padding: 0;
+        gap: 20px;
+        font-family: Overpass;
+    }
+    .mobilemenulist ul{
+        padding: 0;
+    }
+    .button .mobilemenulist li{
+        list-style: none;
+        padding: 0;
+    }
+    .mobilemenulist li ul{
+        margin-top: 10px;
+        padding: 15px 0;
+        display: none;
+        flex-direction: column;
+        gap: 10px;
+        border-radius: 10px;
+        color: rgba(0, 0, 0, 0.664);
+        background-color: hsl(240, 4%, 95%);
+    }
+    /*  */
+    .mobilemenulist .mobileproduct{
+        display: none;
+    }
+    .mobilemenulist .mobilecompany{
+        display: none;
+    }
+    .mobilemenulist .mobileconnect{
+        display: none;
+    }
+    .mobilemenulist .mobileproduct.mactive1{
+        display: flex;
+    }
+    .mobilemenulist .mobilecompany.mactive2{
+        display: flex;
+    }
+    .mobilemenulist .mobileconnect.mactive3{
+        display: flex;
+    }
+    /*  */
+   
+    .button .mobilemenulist img{
+        margin-left: 5px;
+    }
+    .button .mobilemenulist .mobileup{
+        display: none;
+        transform: rotate(180deg);
+    }
+     /*  */
+    .mobileup.upper{
+        display: inline;
+    }
+    .down3{
+        display: none;
+    }
+    /*  */
+    .button .login{
+        color: black;
+        font-weight: 600;
+    }
+    .button .signup{
+        align-self: center;
+        font-weight: 600;
+        background-color: hsl(356, 100%, 66%);
+        color: white;
+        width: 150px;
+        text-align: center;
+    }
+    .secondcontent{
+        display: flex;
+        flex-direction: column;
+    }
+    .secondcontent h1{
+        font-size: clamp(1rem,7vw,2rem);
+    }
+    .secondcontent .secondcover{
+        max-width: 100%;
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+    .secondcover h2{
+        text-align: center;
+    }
+    .secondcover p{
+        text-align: center;
+        padding: 0 10px;
+    }
+    .secondcontent .illustrator{
+        display: none;
+    }
+    .secondcontent .illustrator2{
+        display: block;
+        object-fit: cover;
+        object-position: center;
+    }
+    .fourthcontent{
+        flex-direction: column;
+        background-image: none;
+        overflow-x: hidden;
+    }
+    .fourthcontent .mob{
+        display: block;
+    }
+    .fourthcontent .fourthtext{
+        max-width: 100%;
+        margin: 20px;
+        text-align: center;
+    }
+    .footersection .footer{
+        margin: 15% 10%;
+        width: 100%;
+        justify-content: center;
+        /* align-items: center; */
+        text-align: center;
+    }
+}
+@media all and (max-width:700px) {
+    .secondcontent .illustrator2{
+        display: block;
+        content: url('images/illustration-editor-mobile.svg');
+    }
+    .thirdcontent{
+        background-position: 50% 80%;
+    }
+    .thirdcontent .mobile{
+        left: 50%;
+        top: -30%;
+        transform: translateX(-50%);
+        width: 50%;
+    }
+    .thirdcontent .thirdtext{
+        max-width: 100%;
+        margin-top: 170px;
+        margin-bottom: 80px;
+        text-align: center;
+    }
+    .thirdtext h1{
+        margin-left: 0;
+    }
+}
+@media all and (max-width:590px) {
+    .footersection .footer{
+        margin: 15% 10%;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        text-align: center;
+    }
+    .footersection .footer .footertext:nth-child(1){
+        margin-bottom: 40px;
+    }
+    
+}
+@media all and (max-width:420px) {
+    .thirdcontent .mobile{
+        width: 100%;
+        top: -35%;
+    }
+    .thirdcontent{
+        background-position: 50% 280%;
+        background-size: 160%;
+    }
+}
+/* hover status */
+.wrapper nav .cover .menulist>li:hover{
+    cursor: pointer;
+    text-decoration: underline;
+}
+.wrapper nav .cover .menulist>li>ul>li:hover{
+    cursor: pointer;
+    font-weight: 600;
+}
+.wrapper nav .button .signup:hover{
+    cursor: pointer;
+    background-color: rgba(255, 255, 255, 0.356);
+    color: white;
+}
+.wrapper .maincontent .buttondiv .learnmore:hover{
+    cursor: pointer;
+    background-color: white;
+    color: hsl(356, 100%, 66%);
+}
+.wrapper .maincontent .buttondiv .start:hover{
+    cursor: pointer;
+    background-color: rgba(255, 255, 255, 0.356);
+    color: white;
+}
+.footersection .footertext li:hover{
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+
+
+
+@media screen and (max-width: 1050px) {
+    .wrapper nav .cover .menulist {
+      display: none;
+    }
+  
+    .wrapper nav .hamburgericon {
+      display: block;
+    }
+  .wrapper nav ul{
+    
+  }
+    .wrapper nav .button {
+      position: absolute;
+      right: 5%;
+      top: 13%;
+      display: none;
+      flex-direction: column;
+      background-color: white;
+      width: 80%;
+      max-height: 100vh;
+      box-shadow: 5px 3px 30px rgba(29, 29, 29, 0.322);
+      text-align: center;
+      padding: 20px;
+      gap: 10px;
+      z-index: 10;
+      font-family: Overpass;
+      font-weight: 600;
+      transform: scale(0.1);
+      transition: 0.5s;
+      overflow-x: hidden;
+    }
+  
+    .wrapper nav.activate .button {
+      display: flex;
+      transform: scale(1);
+      overflow-x: hidden;
+    }
+   .buttons{
+        display: flex;
+        flex-direction: column;
+        transform: scale(1);
+        overflow-x: hidden;
+        position: absolute;
+    right: 5%;
+    top: 13%;
+   
+    flex-direction: column;
+    background-color: white;
+    width: 80%;
+    max-height: 100vh;
+    box-shadow: 5px 3px 30px rgba(29, 29, 29, 0.322);
+    text-align: center;
+    padding: 20px;
+    gap: 10px;
+    z-index: 10;
+    font-family: Overpass;
+    font-weight: 600;
+    transition: 0.5s;
+    }
+    .buttons ul{
+        flex-direction: column;
+        gap: 10px;
+        border-radius: 10px;
+        color: rgba(0, 0, 0, 0.664);
+        background-color: hsl(240, 4%, 95%);
+        margin-top: 10px;
+        padding: 15px 0;
+    }
+    .mobileproduct{
+        display: flex;
+        flex-direction: column;
+        list-style: none;
+        padding: 0;
+        gap: 20px;
+        font-family: Overpass;
+    }
+    .mobilecompany{
+        display: flex;
+        flex-direction: column;
+        list-style: none;
+        padding: 0;
+        gap: 20px;
+        font-family: Overpass;
+    }
+    .mobileconnect{
+        display: flex;
+        flex-direction: column;
+        list-style: none;
+        padding: 0;
+        gap: 20px;
+        font-family: Overpass;
+    }
+  }
+  
+
+  @media screen and (max-width: 900px) {
+
+    .wrapper .maincontent h1 {
+      padding: 0 20px;
+      text-align: center;
+      font-size: clamp(0.5rem, 9.5vw, 3rem);
+    }
+  
+    .wrapper .maincontent p {
+      padding: 0 20px;
+      text-align: center;
+    }
+  
+    
+    .button .mobilemenulist {
+      display: flex;
+      flex-direction: column;
+      list-style: none;
+      padding: 0;
+      gap: 20px;
+      font-family: Overpass;
+    }
+  
+    .mobilemenulist ul {
+      padding: 0;
+    }
+  
+    .button .mobilemenulist li {
+      list-style: none;
+      padding: 0;
+    }
+  
+  }
+  
+  @media screen and (max-width: 700px) {
+  }
+  @media screen and (max-width: 590px) {
+  }
+  @media screen and (max-width: 420px) {
+  
+  }
+  
+ 
+  .wrapper nav .cover .menulist>li:hover {
+    cursor: pointer;
+    text-decoration: underline;
+  }
